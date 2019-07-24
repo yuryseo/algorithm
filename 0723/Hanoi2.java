@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class Hanoi2 {
+	
 	public static BufferedReader br;
 	public static BufferedWriter bw;
 

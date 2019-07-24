@@ -27,6 +27,7 @@ public class Hanoi {
 		
 		//2번째 기둥에 있는 원판을 세번째 자리로 옮기기
 		Hanoi(n - 1, by, from, to);
+		
 	}
 
 }
