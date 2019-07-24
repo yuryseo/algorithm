@@ -10,6 +10,11 @@ public class Hanoi2 {
 	public static BufferedReader br;
 	public static BufferedWriter bw;
 
+	
+	
+	
+	
+	
 	public static void main(String[] args) throws IOException {
 		br = new BufferedReader(new InputStreamReader(System.in));
 		bw = new BufferedWriter(new OutputStreamWriter(System.out));
