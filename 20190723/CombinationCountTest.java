@@ -2,9 +2,6 @@ package com.ssafy.recursive;
 
 import java.util.Scanner;
 
-
-
-
 public class CombinationCountTest {
 
 	public static void main(String[] args) {

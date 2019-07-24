@@ -10,7 +10,7 @@ public class HW1_BinarySearch_서유리 {
 		int[] arr = new int[N];
 		for (int i = 0; i < N; i++) {
 			arr[i] = sc.nextInt();
-
+ 
 		}
 
 		Arrays.sort(arr);

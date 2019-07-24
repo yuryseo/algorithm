@@ -12,7 +12,7 @@ public class BubbleSort {
 		int[] arr = new int[N];
 
 		for (int i = 0; i < N; i++) {
-			arr[i] = sc.nextInt();
+			arr[i] = sc.nextInt(); 
 		}
 		
 		for (int i = N - 1; i > 0; i--) {
