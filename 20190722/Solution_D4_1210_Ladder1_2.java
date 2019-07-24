@@ -6,7 +6,7 @@ public class Solution_D4_1210_Ladder1_2{
 
 	static int[][] arr;
  
-	static int result = 0;
+	static int result = 0; 
 
 	public static void main(String[] args) throws FileNotFoundException {
 		System.setIn(new FileInputStream("input.txt"));

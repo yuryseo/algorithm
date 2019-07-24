@@ -7,7 +7,7 @@ public class CombinationCountTest {
 	public static void main(String[] args) {
 		// n개의 수 중에 k개를 조합할 수 있는 경우의 수 => nCk =>재귀로....
 		// 안뽑는거도 경우의 수에 포함해야지...
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); 
 
 		int N = sc.nextInt();
 		int K = sc.nextInt();

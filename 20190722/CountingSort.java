@@ -7,7 +7,7 @@ public class CountingSort {
 	public static void main(String[] args) { 
 
 		Scanner sc = new Scanner(System.in);
-
+ 
 		int[] arr = new int[] { 0, 4, 1, 3, 1, 2, 4, 1 };
 		
 		System.out.println(Arrays.toString(arr));

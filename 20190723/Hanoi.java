@@ -1,7 +1,7 @@
 package com.ssafy.recursive;
 
 import java.util.Scanner;
-
+ 
 public class Hanoi {
  
 	public static void main(String[] args) {
