@@ -1,5 +1,6 @@
 package Product;
 
+
 public class Product {
 	private String productnum;	
 	private String name;	
@@ -34,7 +35,7 @@ public class Product {
 		if (price >= 0) {
 			this.price = price;
 		} else {
-			System.out.println("ê°?ê²©ì„ 0?› ?´?ƒ?œ¼ë¡? ?…? ¥?•´ì£¼ì„¸?š”");
+			System.out.println("ê°€ê²©ì„ 0ì› ì´ìƒìœ¼ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			this.price=0;
 		}
 	}
@@ -45,12 +46,12 @@ public class Product {
 		if (num >= 0) {
 			this.num = num;
 		} else {
-			System.out.println("ê°œìˆ˜ë¥? 0?´?ƒ?œ¼ë¡? ?…? ¥?•´ì£¼ì„¸?š”");
+			System.out.println("ê°¯ìˆ˜ë¥¼ 0ì› ì´ìƒìœ¼ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			this.num=0;
 		}
 	}
 	public String toString() {
-		return "? œ?’ˆë²ˆí˜¸:" + productnum + " ? œ?’ˆëª?:" + name + " ê°?ê²?:" + price + " ?¬ê³?:" + num;
+		return "ì œí’ˆë²ˆí˜¸:" + productnum + " ì œí’ˆëª…:" + name + " ê°€ê²©:" + price + " ì¬ê³ ìˆ˜ëŸ‰:" + num;
 	}
 
 	

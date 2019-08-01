@@ -1,5 +1,6 @@
 package Product;
 
+
 public class Refrigerator extends Product{	
 	
 	private int size;	
@@ -17,13 +18,13 @@ public class Refrigerator extends Product{
 		if (size >= 0) {
 			this.size = size;
 		} else {
-			System.out.println("?¬ê¸°ë?? 0?´?ƒ?œ¼ë¡? ?„¤? •?•´ì£¼ì„¸?š”");
+			System.out.println("ëƒ‰ì¥ê³ ì˜ í¬ê¸°ë¥¼ 0ì´ìƒìœ¼ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			this.size=0;
 		}
 	}
 
 	public String toString() {
-		return super.toString() + "?ƒ‰?¥ê³? ?¬ê¸? : "+size;
+		return super.toString() + "ëƒ‰ì¥ê³  í¬ê¸° : "+size;
 	}
 
 	

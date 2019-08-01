@@ -1,11 +1,11 @@
 package Product;
 
+
 public class TV extends Product{	
 	
 	private int inch;
 	
 	public TV() {}
-	
 	
 	public TV(String productnum, String name, int price, int num, int inch) {
 		super(productnum, name, price, num);
@@ -15,7 +15,7 @@ public class TV extends Product{
 		if (inch >= 0) {
 			this.inch = inch;
 		} else {
-			System.out.println(" ?¬ê¸°ë??  0?´?ƒ?œ¼ë¡? ?…? ¥?•´ì£¼ì„¸?š”");
+			System.out.println(" ì¸ì¹˜ë¥¼ 0ì´ìƒìœ¼ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			this.inch=0;
 		}
 	}
@@ -27,7 +27,7 @@ public class TV extends Product{
 
 
 	public String toString() {
-		return super.toString()+" ?¸ì¹?:" + inch;
+		return super.toString()+" TV ì¸ì¹˜:" + inch;
 	}
 	
 	

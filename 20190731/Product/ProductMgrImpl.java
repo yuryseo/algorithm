@@ -1,5 +1,6 @@
 package Product;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class ProductMgrImpl implements IProductMgr {
 			String num = product.getProductnum();
 			int index = findIndex(num);
 			if (index > -1) {
-				System.out.println("?´ë¯? ?“±ë¡ëœ ì±…ì…?‹ˆ?‹¤.");
+				System.out.println("ì´ë¯¸ ë“±ë¡ëœ ì±…ì…ë‹ˆë‹¤.");
 			} else {
 				products.add(product);
 			}
@@ -36,7 +37,7 @@ public class ProductMgrImpl implements IProductMgr {
 	}
 
 	public List<Product> searchAll() {
-		System.out.println("======? „ì²´ëª©ë¡?======");
+		System.out.println("======ì „ì²´ ì œí’ˆ ======");
 		return products;
 	}
 
@@ -52,22 +53,22 @@ public class ProductMgrImpl implements IProductMgr {
 	}
 
 	public Product FindByProductnum(String productnum) {
-		System.out.println("======? œ?’ˆë²ˆí˜¸ ê²??ƒ‰======");
+		System.out.println("======ì œí’ˆë²ˆí˜¸ë¡œ ê²€ìƒ‰í•œ ëª©ë¡======");
 		int index = findIndex(productnum);
 		if (productnum != null) {
 			if (index > -1) {
 				return products.get(index);
 			} else {
-				System.out.println("?“±ë¡ë˜ì§? ?•Š?? ? œ?’ˆë²ˆí˜¸?…?‹ˆ?‹¤.");
+				System.out.println("ë“±ë¡ë˜ì§€ ì•Šì€ ì œí’ˆë²ˆí˜¸ ì…ë‹ˆë‹¤");
 			}
 		} else {
-			System.out.println("? œ?’ˆë²ˆí˜¸ë¥? ?…? ¥?•˜?—¬ ì£¼ì„¸?š”");
+			System.out.println("ì œí’ˆë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì—¬ì£¼ì„¸ìš”");
 		}
 		return null;
 	}
 
 	public List<Product> FindByName(String name) {
-		System.out.println("======"+name+"?´(ê°?) ?¬?•¨?œ ê²??ƒ‰======");
+		System.out.println("======"+name+"ì´ í¬í•¨ë˜ëŠ” ì œí’ˆ ëª©ë¡======");
 		List<Product> temp = new ArrayList<>();
 		if (name != null) {
 			for (int i = 0; i < products.size(); i++) {
@@ -80,7 +81,7 @@ public class ProductMgrImpl implements IProductMgr {
 	}
 
 	public List<Product> FindOnlyTV() {
-		System.out.println("=======TV ê²??ƒ‰=======");
+		System.out.println("=======TV ê²€ìƒ‰ ëª©ë¡=======");
 		List<Product> temp = new ArrayList<>();
 		for (int i = 0; i < products.size(); i++) {
 			if (products.get(i) instanceof TV) {
@@ -91,7 +92,7 @@ public class ProductMgrImpl implements IProductMgr {
 	}
 
 	public List<Product> FindOnlyRefrigerator() {
-		System.out.println("=======?ƒ‰?¥ê³? ê²??ƒ‰=======");
+		System.out.println("=======Refrigerator ê²€ìƒ‰ ëª©ë¡=======");
 		List<Product> temp = new ArrayList<>();
 		for (int i = 0; i < products.size(); i++) {
 			if (products.get(i) instanceof Refrigerator) {
@@ -102,7 +103,7 @@ public class ProductMgrImpl implements IProductMgr {
 	}
 
 	public List<Product> FindTV50() {
-		System.out.println("=======TV 50?¸ì¹? ?´?ƒ ê²??ƒ‰=======");
+		System.out.println("=======TV 50ì¸ì¹˜ ì´ìƒ ê²€ìƒ‰=======");
 		List<Product> temp = new ArrayList<>();
 		for (int i = 0; i < products.size(); i++) {
 
@@ -116,7 +117,7 @@ public class ProductMgrImpl implements IProductMgr {
 	}
 
 	public List<Product> FindRefrigerator400() {
-		System.out.println("=======?ƒ‰?¥ê³? 400ë¦¬í„° ?´?ƒ ê²??ƒ‰=======");
+		System.out.println("=======ëƒ‰ì¥ê³  400L ì´ìƒ ê²€ìƒ‰=======");
 		List<Product> temp = new ArrayList<>();
 		for (int i = 0; i < products.size(); i++) {
 
@@ -136,7 +137,7 @@ public class ProductMgrImpl implements IProductMgr {
 			if (index > -1) {
 				products.get(index).setPrice(price);
 			} else {
-				System.out.println("?ˆ˜? •?•  ? œ?’ˆë²ˆí˜¸ê°? ?“±ë¡ë˜ì§? ?•Š?•˜?Šµ?‹ˆ?‹¤.");
+				System.out.println("ì—…ë°ì´íŠ¸ í•  ì œí’ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 			}
 
 		}
@@ -149,14 +150,14 @@ public class ProductMgrImpl implements IProductMgr {
 			if (index > -1) {
 				products.remove(index);
 			} else {
-				System.out.println("?‚­? œ?•  ? œ?’ˆë²ˆí˜¸ê°? ?“±ë¡ë˜ì§? ?•Š?•˜?Šµ?‹ˆ?‹¤.");
+				System.out.println("ì œê±° í•  ì œí’ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 			}
 
 		}
 	}
 
 	public int PriceSum() {
-		System.out.println("=====? „ì²? ?¬ê³? ?ƒ?’ˆ ê¸ˆì•¡=====");
+		System.out.println("=====ì´ ì œí’ˆ ê¸ˆì•¡=====");
 		int sum = 0;
 		for (int i = 0; i < products.size(); i++) {
 			sum += (products.get(i).getPrice()) * products.get(i).getNum();

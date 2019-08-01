@@ -1,11 +1,9 @@
 package Product;
 
+
 import java.util.List;
 
 public interface IProductMgr {
-
-	int findIndex(String productnum);
-
 	void add(Product product);
 
 	List<Product> searchAll();
