@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-/*class Pair {
+class Pair {
 	int x, y;
 
 	public Pair(int x, int y) {
@@ -9,7 +9,7 @@ import java.util.Scanner;
 		this.x = x;
 		this.y = y;
 	}
-}*/
+}
 public class jungol_2634_사냥꾼 {
 	public static void main(String[] args) throws Exception {
 
