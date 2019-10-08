@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_17471_게리멘더링 {
+public class Main_17471_게리맨더링 {
 
 	private static int n, sum;
 	private static int min = Integer.MAX_VALUE;
@@ -52,7 +52,7 @@ public class Main_17471_게리멘더링 {
 			for (int i = 0; i < n; i++) {
 				if (combi[i] == 0 && check[i] == 0) {
 					sum = 0;
-					gary(i);
+					gerry(i);
 					g1 = sum;
 					break;
 				}
@@ -60,7 +60,7 @@ public class Main_17471_게리멘더링 {
 			for (int i = 0; i < n; i++) {
 				if (combi[i] == 1 && check[i] == 0) {
 					sum = 0;
-					gary(i);
+					gerry(i);
 					g2 = sum;
 					break;
 				}
@@ -85,12 +85,12 @@ public class Main_17471_게리멘더링 {
 
 	}
 
-	private static void gary(int now) {
+	private static void gerry(int now) {
 		check[now] = 1;
 		sum += people[now];
 		for (int i = 0; i < n; i++) {
 			if (check[i] == 0 && combi[now] == combi[i] && map[i][now] == 1) {
-				gary(i);
+				gerry(i);
 			}
 		}
 	}
