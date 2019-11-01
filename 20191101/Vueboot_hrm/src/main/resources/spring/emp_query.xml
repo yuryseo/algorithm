@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.dao.EmpDao">
+
+	<resultMap type="emp" id="EmployeeResultMap">
+		<id column="eid" property="id" />
+		<result column="ename" property="name" />
+		<result column="did" property="dept_id" />
+	</resultMap>
+
+	<select id="findAllEmployees"  resultMap="EmployeeResultMap">
+		select
+		id eid, name ename ,dept_id did
+		from s_emp order by id
+	</select>
+
+	<insert id="addEmployee" useGeneratedKeys="true"
+		keyProperty="id" parameterType="emp">
+		<!-- useGeneratedKeys="true" keyProperty="id" => id auto-increase에 넣어줌 -->
+		insert into
+		s_emp(id,name,mailid,start_date,manager_id,title,dept_id,salary,commission_pct)
+		values (
+		#{id},#{name},#{mailid},#{start_date},#{manager_id},#{title},#{dept_id},#{salary},#{commission_pct});
+
+	</insert>
+
+	<update id="updateEmployee" parameterType="emp">
+		update s_emp set
+		name=#{name}
+		,mailid=#{mailid}
+		,start_date=#{start_date}
+		,manager_id=#{manager_id}
+		,title=#{title}
+		,dept_id=#{dept_id}
+		,salary=#{salary}
+		,commission_pct=#{commission_pct}
+		where id=#{id}
+	</update>
+
+	<delete id="deleteEmployee" parameterType="int">
+		delete from s_emp
+		where id=#{id}
+	</delete>
+
+
+	<select id="findEmployeeById" parameterType="int"
+		resultType="emp">
+		select
+		id,name,mailid,start_date,manager_id,title,dept_id,
+		ifnull(salary, 0.0) salary, ifnull(commission_pct, 0.0)commission_pct
+		from s_emp
+		where id=#{id}
+	</select>
+
+	<select id="findLikeEmployee" parameterType="string"
+		resultType="emp">
+		select
+		id,name,mailid,start_date,manager_id,title,dept_id,salary,commission_pct
+		from s_emp
+		where name like concat('%',#{name},'%')
+	</select>
+
+	<!-- <select id="findAllEmployees" resultType="EmployeeResultMap"> select 
+		id,name,mailid,start_date,manager_id,title,dept_id,salary,commission_pct 
+		from s_emp order by id </select> -->
+	<select id="findAllTitles" resultType="string">
+		select distinct title from
+		s_emp ;
+	</select>
+
+	<select id="findAllDepartment" resultType="string">
+		select distinct d.name
+		from s_dept d
+		join s_emp e
+		where d.dept_id = e.dept_id
+	</select>
+
+	<select id="getEmployeesTotal" resultType="string">
+		select count(*) from
+		s_emp;
+	</select>
+
+	<!-- findDepartmentEmployees -->
+	
+	<resultMap type="dept" id="DeptResultMap">
+		<id column="dept_id" property="dept_id" />
+		<result column="name" property="name"/>
+		<result column="region_id" property="region_id"/>
+		<!-- dept를 기준으로 emp 가 여러개니깐 collection
+						emp 가 1개면  association
+		 -->
+		<collection property="employees" resultMap="EmployeeResultMap"/>
+	</resultMap>
+	
+	<select id="findDepartmentEmployees" parameterType="int" resultMap="DeptResultMap">
+		select
+		d.dept_id, d.name,d.region_id, e.id eid , e.name ename
+		from s_dept d left join s_emp e
+		on (d.dept_id = e.dept_id)
+		where d.dept_id = #{id}
+	</select>
+
+
+
+</mapper>
+
+
